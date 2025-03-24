@@ -2601,7 +2601,7 @@ import re
 # s = 'hello\nworld'
 # print(len(s))
 
-
+print('данные в локальном репозитории')
 
 
 
