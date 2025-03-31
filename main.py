@@ -8,8 +8,7 @@
 #
 # print(id(name))
 # print(id(age))
-
-
+import os
 # name = 'admin'
 # print(name)
 
@@ -2603,7 +2602,222 @@ import re
 
 # print('данные в локальном репозитории')
 
-print('код созданный на новом устройстве')
+# print('код созданный на новом устройстве')
+
+# import os
+#
+# dirs = [r'work\F1', r'work\F2\F21']
+#
+# # for d in dirs:
+# #     os.makedirs(d)
+#
+# files = {
+#     'work': ['w.txt'],
+#     r'work\F1': ['f11.txt', 'f12.txt', 'f13.txt'],
+#     r'work\F2\F21': ['f211.txt', 'f212.txt']
+# }
+#
+# # for key, value in files.items():
+# #     for file in value:
+# #         file_path = os.path.join(key, file)
+# #         open(file_path, 'w').close()
+#
+# file_with_text = [r'work\w.txt', r'work\F1\f12.txt', r'work\F2\f21\f211.txt']
+#
+#
+# # for file in file_with_text:
+# #     with open(file, 'w') as f:
+# #         f.write(f'Некоторый текст для файла {file}')
+#
+#
+# def print_tree(topdown):
+#     print(f'обход work {'сверху вниз' if topdown else 'снизу вверх'}')
+#     for root, directory, file in os.walk('work', topdown):
+#         print(root)
+#         print(directory)
+#         print(file)
+#     print('-' * 50)
+#
+#
+# print_tree(False)
+# print_tree(True)
+
+# import os
+# import time
+#
+# path = 'main.py'
+# print(os.path.getsize(path))  # размер файла
+# print(os.path.getatime(path))  # время последнего доступа к файлу (в секундах)
+# print(os.path.getmtime(path))  # время последнего изменения файла
+# print(os.path.getctime(path))  # время создания файла
+#
+# size = os.path.getsize(path)
+# a_time = os.path.getatime(path)
+# m_time = os.path.getmtime(path)
+# c_time = os.path.getctime(path)
+#
+# print(time.strftime('%d.%m.%Y, %H:%M:%S', time.localtime(a_time)))
+# print(time.strftime('%d.%m.%Y, %H:%M:%S', time.localtime(m_time)))
+# print(time.strftime('%d.%m.%Y, %H:%M:%S', time.localtime(c_time)))
+# print(size // 1024)
+
+# import os
+#
+# file_path = r'C:\python\nested1\new_file.txt'
+#
+# if os.path.exists(file_path):
+#     dih, name = os.path.split(file_path)
+#     time = os.path.getatime(file_path)
+#     print(f'{name} ({dih}) - {time}')
+# else:
+#     print(f'файл {file_path} не существует')
+
+# import os
+#
+# dir_name = 'work'
+#
+# objs = os.listdir(dir_name)
+# print(objs)
+#
+# for obj in objs:
+#     p = os.path.join(dir_name, obj)
+#     # print(p)
+#     if os.path.isfile(p):
+#         print(f'{obj} - file - {os.path.getsize(p)} bytes')
+#     if os.path.isdir(p):
+#         print(f'{obj} - dir')
+
+import os
+#
+# dir_name = r'E:work\F1'
+#
+# for file in os.listdir(dir_name):
+#     dir_file = dir_name + '\\' + file
+#     if os.path.isfile(dir_file):
+#         with open(dir_file) as fil:
+#             test = fil.readlines()
+#             print(test)
+
+# import os
+
+# file_path = 'work'
+#
+#
+# obj = os.listdir(file_path)
+# print(obj)
+
+
+# if os.path.exists(file_path):
+#     dih, name = os.path.split(file_path)
+#     time = os.path.getatime(file_path)
+#     print(f'{name} ({dih}) - {time}')
+# else:
+#     print(f'файл {file_path} не существует')
+
+import os
+
+dir_name = 'work'
+a_name = r'E:\python\work\F1'
+b_name = r'E:\python\work\F2\F21'
+
+objs = os.listdir(dir_name)
+obi = os.listdir(a_name)
+oba = os.listdir(b_name)
+su = obi + objs + oba
+# print(su)
+
+for obj in su:
+    p = os.path.join(dir_name, obj)
+    c = os.path.join(a_name, obj)
+    z = os.path.join(b_name, obj)
+
+    if os.path.isfile(p):
+        if os.path.getsize(p) > 0:
+            print(f'{p} - {os.path.getsize(p)} bytes')
+    if os.path.isfile(c):
+        if os.path.getsize(c) > 0:
+            print(f'{c} - {os.path.getsize(c)} bytes')
+    if os.path.isfile(z):
+        if os.path.getsize(z) > 0:
+            print(f'{z} - {os.path.getsize(z)} bytes')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
