@@ -1,27 +1,18 @@
 import os
 
-dir_name = 'work'
-a_name = r'E:\python\work\F1'
-b_name = r'E:\python\work\F2\F21'
 
-objs = os.listdir(dir_name)
-obi = os.listdir(a_name)
-oba = os.listdir(b_name)
-su = obi + objs + oba
-# print(su)
+def info_files(root, folder):
+    for root, dirs, files in os.walk(root):
+        for file in files:
+            file_path = os.path.join(root, file)
+            # print(file_path)
+            file_size = os.path.getsize(file_path)
+            if file_size == 0:
+                os.renames(file_path, os.path.join(folder, file))
+                print(f'файл {file} перемещен из папки {root} в папку {folder}')
+            else:
+                print(f'{file_path} - {file_size} bytes')
 
-for obj in su:
-    p = os.path.join(dir_name, obj)
-    c = os.path.join(a_name, obj)
-    z = os.path.join(b_name, obj)
 
-    if os.path.isfile(p):
-        if os.path.getsize(p) > 0:
-            print(f'{p} - {os.path.getsize(p)} bytes')
-    if os.path.isfile(c):
-        if os.path.getsize(c) > 0:
-            print(f'{c} - {os.path.getsize(c)} bytes')
-    if os.path.isfile(z):
-        if os.path.getsize(z) > 0:
-            print(f'{z} - {os.path.getsize(z)} bytes')
+info_files('work', 'work/empty_files')
 
