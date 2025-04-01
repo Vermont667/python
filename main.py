@@ -2742,84 +2742,212 @@ import os
 #             print(f'{z} - {os.path.getsize(z)} bytes')
 
 
-import os
-
-
-def info_files(root, folder):
-    for root, dirs, files in os.walk(root):
-        for file in files:
-            file_path = os.path.join(root, file)
-            # print(file_path)
-            file_size = os.path.getsize(file_path)
-            if file_size == 0:
-                os.renames(file_path, os.path.join(folder, file))
-                print(f'файл {file} перемещен из папки {root} в папку {folder}')
-            else:
-                print(f'{file_path} - {file_size} bytes')
-
-
-info_files('work', 'work/empty_files')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# import os
+#
+#
+# def info_files(root, folder):
+#     for root, dirs, files in os.walk(root):
+#         for file in files:
+#             file_path = os.path.join(root, file)
+#             # print(file_path)
+#             file_size = os.path.getsize(file_path)
+#             if file_size == 0:
+#                 os.renames(file_path, os.path.join(folder, file))
+#                 print(f'файл {file} перемещен из папки {root} в папку {folder}')
+#             else:
+#                 print(f'{file_path} - {file_size} bytes')
+#
+#
+# info_files('work', 'work/empty_files')
+
+
+# ООП
+
+# class Point:
+#     x = 1
+#     y = 2
+#
+#
+# p1 = Point()
+# Point.x = 100
+# print(p1.x)
+# print(Point.x)
+# print(id(Point))
+# print(id(p1))
+# p1.x = 100
+# p1.y = 50
+# print(p1.x, p1.y)
+# print(p1.__dict__)
+# p2 = Point()
+# print(p2.x, p2.y)
+# print(p2.__dict__)
+# print(Point.__dict__)
+
+# class Point:
+#     x = 1
+#     y = 2
+#
+#     def set_coord(self):
+#         print(self.__dict__)
+#
+#
+# p1 = Point()
+# p1.x = 5
+# p1.y = 10
+# p1.set_coord()
+# Point.set_coord(p1)
+#
+# p2 = Point()
+# p2.set_coord()
+
+
+# class Point:
+#     x = 1
+#     y = 2
+#
+#     def set_coord(self, x1, y1):
+#         self.x = x1
+#         self.y = y1
+#
+#
+# p1 = Point()
+# p1.set_coord(5, 10)
+# Point.set_coord(p1, 10, 20)
+# print(p1.__dict__)
+#
+# p2 = Point()
+# p2.set_coord(2, 7)
+# print(p2.__dict__)
+
+
+# class Human:
+#     name = 'Name'
+#     birthday = '00.00.0000'
+#     phone = '00-00-00'
+#     country = 'country'
+#     city = 'city'
+#     address = 'street house'
+#
+#     def print_info(self):
+#         print(' персональные данные '.center(40, '*'))
+#         print(f'имя: {self.name}\nдата рождения: {self.birthday}\nномер телефона: {self.phone}\n'
+#               f'страна: {self.country}\nгород: {self.city}\nдомашний адрес: {self.address}')
+#         print('=' * 40)
+#
+#     def input_info(self, first_name, birthday, phone, country, city, address):
+#         self.name = first_name
+#         self.birthday = birthday
+#         self.phone = phone
+#         self.country = country
+#         self.city = city
+#         self.address = address
+#
+#     def set_name(self, name):  # установили новое имя
+#         self.name = name
+#
+#     def get_name(self):  # получили имя
+#         return self.name
+#
+#
+# h1 = Human()
+# h1.print_info()
+# h1.input_info('Юля', '23.05.1986', '45-46-98', 'Россия', 'Москва',
+#               'Чистопрудный бульвар, 1А')
+# h1.print_info()
+# h1.set_name('Юлия')
+# h1.print_info()
+# print(h1.get_name())
+
+
+# class Person:
+#     skill = 10
+#
+#     def __init__(self, name, surname):
+#         self.name = name
+#         self.surname = surname
+#
+#     def __del__(self):
+#         print('удаление экземпляра\n')
+#
+#     def print_info(self):
+#         print('данные сотрудника:', self.name, self.surname)
+#
+#     def add_skill(self, k):
+#         self.skill += k
+#         print('квалификация сотрудника:', self.skill, '\n')
+
+
+# p1 = Person('Виктор', 'Резник')
+# p1.print_info()
+# p1.add_skill(3)
+# del p1
+#
+# p2 = Person('Анна', 'Долгих')
+# p2.print_info()
+# p2.add_skill(2)
+
+
+# class Person:
+#     count = 0
+#
+#     def __init__(self, name, surname):
+#         self.name = name
+#         self.surname = surname
+#         Person.count += 1
+#
+#     def print_info(self):
+#         print('данные сотрудника:', self.name, self.surname)
+#
+#
+# p1 = Person('Виктор', 'Резник')
+# p1.print_info()
+#
+# p2 = Person('Анна', 'Долгих')
+# p2.print_info()
+#
+# print(p1.count)
+# print(p2.count)
+# print(Person.count)
+
+# class Robot:
+#     k = 0
+#
+#     def __init__(self, name):
+#         self.name = name
+#         print('инициализация робота:', self.name)
+#         Robot.k += 1
+#
+#     def __del__(self):
+#         print(self.name, 'выключается!')
+#         Robot.k -= 1
+#
+#         if Robot.k == 0:
+#             print(self.name, 'был последним')
+#         else:
+#             print('работающих роботов осталось:', Robot.k)
+#
+#     def say_hi(self):
+#         print('приветствую! меня зовут:', self.name)
+#
+#
+# droid1 = Robot('R2-D2')
+# droid1.say_hi()
+# print('численность роботов:', Robot.k)
+#
+# droid2 = Robot('C-3PO')
+# droid2.say_hi()
+# print('численность роботов:', Robot.k)
+#
+# droid3 = Robot('B4-50')
+# droid3.say_hi()
+# print('численность роботов:', Robot.k)
+#
+# print('\nздесь роботы могут проделать какую-то работу\n')
+# print('роботы проделали свою работу. давайте их выключим\n')
+#
+# del droid1, droid2, droid3
+#
+# print('численность роботов:', Robot.k)
 
 
 
