@@ -2950,6 +2950,333 @@ import os
 # print('численность роботов:', Robot.k)
 
 
+# class Point:
+#     def __init__(self, x, y):
+#         self.__x = self.__y = 0
+#         if Point.__check_value(x) and Point.__check_value(y):
+#             self.__x = x
+#             self.__y = y
+#
+#     def __check_value(c):
+#         if isinstance(c, int) or isinstance(c, float):
+#             return True
+#         return False
+#
+#     def set_coord(self, x, y):
+#         if Point.__check_value(x) and Point.__check_value(y):
+#             self.__x = x
+#             self.__y = y
+#         else:
+#             print('координаты должны быть числами')
+#
+#     def get_coord(self):
+#         return self.__x, self.__y
+#
+#     def set_coord_x(self, x):
+#         if Point.__check_value(x):
+#             self.__x = x
+#         else:
+#             print('координат x должна быть числом')
+#
+#     def set_coord_y(self, y):
+#         if Point.__check_value(y):
+#             self.__y = y
+#         else:
+#             print('координат y должна быть числом')
+#
+#
+# p1 = Point(5, 10)
+# # p1.z = 20
+# # p1.__x = 100
+# # p1.__y = 'abc'
+# # print(p1.__x, p1.__y)
+# p1.set_coord(50, 100)
+# print(p1.get_coord())
+# p1.set_coord_x(1)
+# print(p1.__dict__)
+# # p1.__check_value(10)
+# # print(Point.__dict__)
+# p1._Point__x = 111
+# print(p1._Point__x)
+# print(p1.__dict__)
+
+# import math
+#
+#
+# class Rectangle:
+#
+#     def __init__(self, lens=1, wids=1):
+#         self.__lens = lens
+#         self.__wids = wids
+#
+#     def __check_value(c):
+#         if isinstance(c, int) or isinstance(c, float):
+#             return True
+#         return False
+#
+#     def get_wids(self):
+#         return self.__wids
+#
+#     def get_lens(self):
+#         return self.__lens
+#
+#     def set_lens(self, lens):
+#         if Rectangle.__check_value(lens):
+#             self.__lens = lens
+#
+#     def set_wids(self, wids):
+#         if Rectangle.__check_value(wids):
+#             self.__wids = wids
+#
+#     def get_area(self):
+#         return self.__lens * self.__wids
+#
+#     def get_perimetr(self):
+#         return (self.__lens + self.__wids) * 2
+#
+#     def get_hypotenuse(self):
+#         return round(math.sqrt(self.__lens ** 2 + self.__wids ** 2), 2)
+#
+#     def get_draw(self):
+#         print(('*' * self.__wids + '\n') * self.__lens)
+#
+#
+# r1 = Rectangle()
+# r1.set_wids(9)
+# r1.set_lens(3)
+# print('длина прямоугольника:', r1.get_lens())
+# print('ширина прямоугольника:', r1.get_wids())
+# print('площадь прямоугольника:', r1.get_area())
+# print('периметр прямоугольника:', r1.get_perimetr())
+# print('гипотенуза прямоугольника:', r1.get_hypotenuse())
+# r1.get_draw()
+
+# class Point:
+#     __slots__ = ['x', 'y']
+#
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y = y
+#
+#
+# p1 = Point(5, 10)
+# # p1.z = 20
+# # print(p1.x, p1.y, p1.z)
+# print(p1.x, p1.y)
+# # print(p1.__dict__)
+
+
+# class Point:
+#
+#     def __init__(self, x, y):
+#         self.__x = x
+#         self.__y = y
+#
+#     def __check_value(c):
+#         if isinstance(c, int) or isinstance(c, float):
+#             return True
+#         return False
+#
+#     def __set_coord_x(self, x):
+#         if Point.__check_value(x):
+#             self.__x = x
+#         else:
+#             print('координата х должна быть числом')
+#
+#     def __get_coord_x(self):
+#         return self.__x
+#
+#     def __del_coord_x(self):
+#         print('удаление свойства')
+#         del self.__x
+#
+#     coordX = property(__get_coord_x, __set_coord_x, __del_coord_x)
+#
+#
+# p1 = Point(5, 10)
+# p1.coordX = 20.5
+# print(p1.coordX)
+# del p1.coordX
+# print(p1.__dict__)
+
+# class Point:
+#
+#     def __init__(self, x, y):
+#         self.__x = x
+#         self.__y = y
+#
+#     def __check_value(c):
+#         if isinstance(c, int) or isinstance(c, float):
+#             return True
+#         return False
+#
+#     @property    # стоит перед сеттером и делитером
+#     def x(self):
+#         return self.__x
+#
+#     @x.setter
+#     def x(self, x):
+#         if Point.__check_value(x):
+#             self.__x = x
+#         else:
+#             print('координата х должна быть числом')
+#
+#     @x.deleter
+#     def x(self):
+#         print('удаление свойства')
+#         del self.__x
+#
+#     # coordX = property(__get_coord_x, __set_coord_x, __del_coord_x)
+#
+#
+# p1 = Point(5, 10)
+# p1.x = 50  # вызов сеттера
+# print(p1.x)  # вызов геттера
+# del p1.x
+# print(p1.__dict__)
+
+# class Person:
+#
+#     def __init__(self, name, old):
+#         self.__name = name
+#         self.__old = old
+#
+#     @property
+#     def name(self):
+#         return self.__name
+#
+#     @name.setter
+#     def name(self, name):
+#         self.__name = name
+#
+#     @name.deleter
+#     def name(self):
+#         del self.__name
+#
+#     @property
+#     def old(self):
+#         return self.__old
+#
+#     @old.setter
+#     def old(self, old):
+#         self.__old = old
+#
+#     @old.deleter
+#     def old(self):
+#         del self.__old
+#
+#
+# p1 = Person('Irina', 26)
+# print(p1.__dict__)
+# p1.name = 'Igor'
+# p1.old = 31
+# print(p1.name)
+# print(p1.old)
+# del p1.name
+# print(p1.__dict__)
+
+# class Point:
+#     __count = 0
+#
+#     def __init__(self, x=0, y=0):
+#         self.x = x
+#         self.y = y
+#         Point.__count += 1
+#
+#     @staticmethod
+#     def get_count():
+#         return Point.__count
+#
+#
+# p1 = Point()
+# p2 = Point()
+# p3 = Point()
+# print(Point.get_count())
+# # print(p1.get_count())
+
+# def inc(x):
+#     return x + 1
+#
+#
+# def dec(x):
+#     return x - 1
+#
+#
+# print(inc(10), dec(10))
+#
+#
+# class Change:
+#     @staticmethod
+#     def inc(x):
+#         return x + 1
+#
+#     @staticmethod
+#     def dec(x):
+#         return x - 1
+#
+#
+# print(Change.inc(10), Change.dec(10))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
