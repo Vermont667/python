@@ -3218,71 +3218,362 @@ import os
 # print(Change.inc(10), Change.dec(10))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# class Numbers:
+#     @staticmethod
+#     def max(a, b, c, d):
+#         mx = a  # 3
+#         if b > mx:  # 5 > 3
+#             mx = b  # 5
+#         if c > mx:  # 7 > 5
+#             mx = c  # 7
+#         if d > mx:  # 9 > 7
+#             mx = d  # 9
+#         return mx
+#
+#     @staticmethod
+#     def min(*args):
+#         mn = args[0]
+#         for i in args:
+#             if i < mn:
+#                 mn = i
+#         return mn
+#
+#     # @staticmethod
+#     # def average(*args):
+#     #     return sum(args) / len(args)
+#
+#     @staticmethod
+#     def average(a, b, c, d):
+#         return (a + b + c + d) / 4
+#
+#     @staticmethod
+#     def factorial(n):
+#         fact = 1
+#         for i in range(1, n + 1):
+#             fact *= i
+#         return fact
+#
+#
+# print(Numbers.max(3, 5, 7, 9))
+# print(Numbers.min(3, 5, 7, 9))
+# print(Numbers.average(3, 5, 7, 9))
+# print(Numbers.factorial(5))
+
+
+# class Date:
+#     def __init__(self, day, month, year):
+#         self.day = day
+#         self.month = month
+#         self.year = year
+#
+#     def string_to_db(self):
+#         return f'{self.year}-{self.month}-{self.day}'
+#
+#     @classmethod
+#     def from_string(cls, string_date):
+#         day, month, year = map(int, string_date.split('.'))
+#         date1 = cls(day, month, year)
+#         return date1
+#
+#
+# # string_date = '23.10.2025'
+# # day, month, year = map(int, string_date.split('.'))  # 23 10 2025
+# # date = Date(day, month, year)
+# date = Date.from_string('23.10.2025')
+# print(date.string_to_db())
+#
+# date2 = Date.from_string('30.12.2024')
+# print(date2.string_to_db())
+
+
+# class Account:
+#     rate_usd = 0.013
+#     rate_eur = 0.011
+#     suffix = 'RUB'
+#     suffix_usd = 'USD'
+#     suffix_eur = 'EUR'
+#
+#     def __init__(self, num, surname, percent, value):
+#         self.num = num
+#         self.surname = surname
+#         self.percent = percent
+#         self.value = value
+#         print(f'Счёт#{self.num} принадлежащий {self.surname} был открыт!')
+#         print('*' * 50)
+#
+#     def __del__(self):
+#         print('*' * 50)
+#         print(f'Счёт#{self.num} принадлежащий {self.surname} был закрыт!')
+#
+#     @classmethod
+#     def set_eur_rate(cls, rate):
+#         cls.rate_eur = rate
+#
+#     @classmethod
+#     def set_usd_rate(cls, rate):
+#         cls.rate_usd = rate
+#
+#     @staticmethod
+#     def convert(value, rate):
+#         return value * rate
+#
+#     def convert_to_usd(self):
+#         usd_val = Account.convert(self.value, self.rate_usd)
+#         print(f'Состояние счета: {usd_val} {Account.suffix_usd}')
+#
+#     def convert_to_eur(self):
+#         eur_val = Account.convert(self.value, Account.rate_eur)
+#         print(f'Состояние счета: {eur_val} {Account.suffix_eur}')
+#
+#     def print_balance(self):
+#         print(f'Текущий баланс {self.value} {Account.suffix}')
+#
+#     def print_info(self):
+#         print('Информация о счёте:')
+#         print('-' * 20)
+#         print(f'#{self.num}')
+#         print(f'Владелец: {self.surname}')
+#         self.print_balance()
+#         print(f'Проценты: {self.percent:.0%}')
+#         print('-' * 20)
+#
+#     def edit_owner(self, surname):
+#         self.surname = surname
+#
+#     def add_percents(self):
+#         self.value += self.value * self.percent
+#         print('Проценты успешно начислены!')
+#         self.print_balance()
+#
+#     def withdraw_money(self, val):
+#         if val > self.value:
+#             print(f'К сожалению у вас нет {val} {Account.suffix}')
+#         else:
+#             self.value -= val
+#             print(f'{val} {Account.suffix} успешно снято!')
+#         self.print_balance()
+#
+#     def add_money(self, val):
+#         self.value += val
+#         print(f'{val} {Account.suffix} успешно начислено!')
+#         self.print_balance()
+#
+#
+# acc = Account('12345', 'Долгих', 0.03, 1000)
+# # acc.print_balance()
+# acc.print_info()
+# acc.convert_to_usd()
+# acc.convert_to_eur()
+# print()
+#
+# Account.set_usd_rate(2)
+# Account.set_eur_rate(3)
+# acc.convert_to_usd()
+# acc.convert_to_eur()
+# print()
+#
+# acc.edit_owner('Дюна')
+# acc.print_info()
+# print()
+#
+# acc.add_percents()
+# print()
+#
+# acc.withdraw_money(100)
+# print()
+#
+# acc.withdraw_money(3000)
+# print()
+#
+# acc.add_money(5000)
+# print()
+#
+# acc.withdraw_money(3000)
+# print()
+
+# import re
+#
+#
+# class UserData:
+#     def __init__(self, fio, old, ps, weight):
+#         self.fio = fio
+#         self.old = old
+#         self.__password = ps
+#         self.__weight = weight
+#
+#     @staticmethod
+#     def verify_fio(fio):
+#         if not isinstance(fio, str):
+#             raise TypeError('ФИО должно быть строкой')
+#         f = fio.split()  # ['Волков2', 'Иг@@@орь', 'Николаевич!']
+#         if len(f) != 3:
+#             raise TypeError('Неверный формат ФИО')
+#         letter = ''.join(re.findall(r'[a-zа-яё-]', fio, flags=re.IGNORECASE))  # ВолковИгорьНиколаевич
+#         for s in f:
+#             # print(s.strip(letter))
+#             if len(s.strip(letter)) != 0:
+#                 raise TypeError('В ФИО можно использовать только буквы и дефис')
+#
+#     @staticmethod
+#     def verify_old(old):
+#         if not isinstance(old, int) or old < 14 or old > 100:
+#             raise TypeError('возраст должен быть числом в диапазоне от 14 до 100 лет')
+#
+#     @property
+#     def fio(self):
+#         return self.__fio
+#
+#     @fio.setter
+#     def fio(self, fio):
+#         self.verify_fio(fio)
+#         self.__fio = fio
+#
+#     @property
+#     def old(self):
+#         return self.__old
+#
+#     @old.setter
+#     def old(self, old):
+#         self.verify_old(year)
+#         self.__old = year
+#
+#
+# p1 = UserData('Волков Игорь Николаевич', 26, '1234 4567890', 80.8)
+# print(p1.__dict__)
+
+
+# class Point:
+#     def __init__(self, x, y):
+#         self.__x = x
+#         self.__y = y
+#
+#     def __str__(self):
+#         return f'({self.__x}, {self.__y})'
+#
+#
+# class Prop:
+#     def __init__(self, sp: Point, ep: Point, color: str = 'red', width: int = 1):
+#         self._sp = sp
+#         self._ep = ep
+#         self._color = color
+#         self._width = width
+#         print('инициализатор класса Prop')
+#
+#
+# class Line(Prop):
+#     def __init__(self, *args):
+#         print('переопределенный инициализатор Line')
+#         # Prop.__init__(self, *args)
+#         super().__init__(*args)
+#
+#     def draw_line(self):
+#         print(f'Рисование линий: {self._sp}, {self._ep}, {self._color}, {self._width}')
+#
+#
+# class Rect(Prop):
+#     def draw_rect(self):
+#         print(f'Рисование прямоугольника: {self._sp}, {self._ep}, {self._color}, {self._width}')
+#
+#
+# line = Line(Point(1, 2), Point(10, 20))
+# line.draw_line()
+# rect = Rect(Point(30, 40), Point(70, 80))
+# rect.draw_rect()
+
+
+# class Figure:
+#     def __init__(self, color):
+#         self.__color = color
+#
+#     @property
+#     def color(self):
+#         return self.__color
+#
+#     @color.setter
+#     def color(self, c):
+#         self.__color = c
+#
+#
+# class Rectangle(Figure):
+#     def __init__(self, width, height, color):
+#         super().__init__(color)
+#         self.__width = width
+#         self.__height = height
+#
+#     @property
+#     def width(self):
+#         return self.__width
+#
+#     @width.setter
+#     def width(self, w):
+#         if not isinstance(w, int):
+#             raise TypeError('ширина должна быть числом')
+#         elif not w > 0:
+#             raise ValueError('ширина должна быть положительной')
+#         else:
+#             self.__width = w
+#
+#     @property
+#     def height(self):
+#         return self.__height
+#
+#     @height.setter
+#     def height(self, h):
+#         if isinstance(h, int) and h > 0:
+#             self.__height = h
+#         else:
+#             raise ValueError('высота должна быть положительной')
+#
+#     def get_area(self):
+#         print(f'площадь {self.color} прямоугольника: ', end='')
+#         return self.__width * self.__height
+#
+#
+# rect = Rectangle(10, 20, 'green')
+# print(rect.width)
+# print(rect.height)
+# print(rect.color)
+# rect.width = 8
+# rect.color = 'red'
+# print(rect.get_area())
+
+
+class Rect:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def show_rect(self):
+        print(f'прямоугольник:\nширина: {self.width}\nвысота: {self.height}')
+
+
+class RectFon(Rect):
+    def __init__(self, width, height, background):
+        self.fon = background
+        super().__init__(width, height)
+
+    def show_rect(self):
+        super().show_rect()
+        print('фон:', self.fon)
+
+
+class RectBorder(Rect):
+    def __init__(self, width, height, r_width, r_type, r_color):
+        super().__init__(width, height)
+        self.r_width = r_width
+        self.r_type = r_type
+        self.r_color = r_color
+
+    def show_rect(self):
+        super().show_rect()
+        print(f'ширина рамки: {self.r_width}\nтип рамки: {self.r_type}\nцвет рамки: {self.r_color}')
+
+
+shape1 = RectFon(400, 200, 'yellow')
+shape1.show_rect()
+print()
+shape2 = RectBorder(600, 300, '1px', 'solid', 'blue')
+shape2.show_rect()
 
 
 
