@@ -893,6 +893,7 @@ import json
 
 import time
 import locale
+from itertools import count
 from os import write
 from sys import base_prefix
 
@@ -5049,73 +5050,195 @@ import pickle
 # group2.load_for_file()
 
 
-import requests
-import json
+# import requests
+# import json
+#
+#
+# response = requests.get('https://jsonplaceholder.typicode.com/todos')
+# todos = json.loads(response.text)
+# # print(todos)
+#
+# todos_by_user = {}
+#
+# for todo in todos:
+#     if todo['completed']:
+#         try:
+#             todos_by_user[todo['userId']] += 1
+#         except KeyError:
+#             todos_by_user[todo['userId']] = 1
+#
+#
+# print(todos_by_user)
+#
+# top_users = sorted(todos_by_user.items(), key=lambda x: x[1], reverse=True)
+# print(top_users)
+#
+# max_complete = top_users[0][1]
+# print(max_complete)
+#
+# users = []
+# for user, num_complete in top_users:
+#     if num_complete < max_complete:
+#         break
+#     users.append(str(user))
+#
+# print(users)
+#
+# max_users = ' and '.join(users)
+# print(max_users)
+#
+# e = 's' if len(users) > 1 else ''
+# print(f'user{e} {max_users} completed {max_complete} TODOs')
 
+# import json
+#
+#
+# class Country:
+#     country = {}
+#     file_name = 'country.json'
+#
+#     def add_country(self, count):
+#         Country.country.update(count)
+#
+#     def del_all(self):
+#         Country.country.clear()
+#
+#     def get_country(self, ind):
+#         print('-' * 20)
+#         print('Страна: ', ind)
+#         print('Столица: ', Country.country.get(ind))
+#
+#     def edit_country(self, index, new_country):
+#         self.country[index] = new_country
+#
+#     def dump_to_json(self):
+#         with open(Country.file_name, 'w') as f:
+#             json.dump(Country.country, f, indent=2)
+#
+#     def load_from_file(self):
+#         with open(Country.file_name, 'r') as f:
+#             print(json.load(f))
+#
+#     def print_info(self):
+#         while True:
+#             print('*' * 30)
+#             n = int(input('Выбор действия:\n1 - добавление данных\n2 - удаление данных\n3 - поиск данных\n'
+#                           '4 - редактирование данных\n5 - просмотр данных\n6 - завершение работы\nВвод: '))
+#             if n == 1:
+#                 a = input('Введите название станы: ')
+#                 b = input('Введите название столицы страны: ')
+#                 self.add_country({a: b})
+#                 self.dump_to_json()
+#                 print('Файл сохранен')
+#             if n == 2:
+#                 self.del_all()
+#                 c.dump_to_json()
+#                 print('Файл сохранен')
+#             if n == 3:
+#                 g = input('Введите страну: ')
+#                 self.get_country(g)
+#             if n == 4:
+#                 h = input('Введите страну: ')
+#                 j = input('Введите новую столицу: ')
+#                 self.edit_country(h, j)
+#                 self.dump_to_json()
+#                 print('Файл сохранен')
+#             if n == 5:
+#                 print(f'{self.country}')
+#             elif n == 6:
+#                 print('Завершение работы')
+#                 break
+#
+#
+# c = Country()
+#
+# c.print_info()
 
-response = requests.get('https://jsonplaceholder.typicode.com/todos')
-todos = json.loads(response.text)
-# print(todos)
+# import csv
 
-todos_by_user = {}
+# with open('data.csv') as f:
+#     file_reader = csv.reader(f, delimiter=';')
+#     count = 0
+#     for row in file_reader:
+#         if count == 0:
+#             print(f'Файл содержит столбцы: {', '.join(row)}')
+#         else:
+#             print(f'\t{row[0]} - {row[1]}. Родился в {row[2]} году.')
+#         count += 1
+#     print(f'Всего в файле {count} строки.')
 
-for todo in todos:
-    if todo['completed']:
-        try:
-            todos_by_user[todo['userId']] += 1
-        except KeyError:
-            todos_by_user[todo['userId']] = 1
+# with open('data.csv') as f:
+#     fields = ['Имя', "Профессия", "Год рождения"]
+#     file_reader = csv.DictReader(f, delimiter=';', fieldnames=fields)
+#     count = 0
+#     for row in file_reader:
+#         if count == 0:
+#             print(f'Файл содержит столбцы: {', '.join(row)}')
+#         print(f'\t{row['Имя']} - {row["Профессия"]}. Родился в {row["Год рождения"]} году.')
+#         count += 1
+#     print(f'Всего в файле {count} строки.')
 
+# import csv
 
-print(todos_by_user)
+# with open('student.csv', 'w') as f:
+#     writer = csv.writer(f, delimiter=';', lineterminator='\r')
+#     writer.writerow(["Имя", "Класс", "Возраст"])
+#     writer.writerow(["Женя", "9", "15"])
+#     writer.writerow(["Саша", "5", "12"])
+#     writer.writerow(["Маша", "11", "18"])
 
-top_users = sorted(todos_by_user.items(), key=lambda x: x[1], reverse=True)
-print(top_users)
+# data = [['hostname', 'vendor', 'model', 'location'],
+#         ['sw1', 'Cisco', '3750', 'London, Best str'],
+#         ['sw2', 'Cisco', '3850', 'Liverpool, Better str'],
+#         ['sw3', 'Cisco', '3650', 'Liverpool, Better str'],
+#         ['sw4', 'Cisco', '3650', 'London, Best str']]
+#
+# with open('sw_data.csv', 'w') as f:
+#     writer = csv.writer(f, delimiter=';', lineterminator='\r')
+#     # for row in data:
+#     #     writer.writerow(row)
+#     writer.writerows(data)
+#
+# with open('sw_data.csv', 'r') as f:
+#     print(f.read())
 
-max_complete = top_users[0][1]
-print(max_complete)
+# import csv
 
-users = []
-for user, num_complete in top_users:
-    if num_complete < max_complete:
-        break
-    users.append(str(user))
+# with open('stud.csv', 'w') as f:
+#     names = ['Имя', "Возраст"]
+#     file_writer = csv.DictWriter(f, delimiter=';', lineterminator='\r', fieldnames=names)
+#     file_writer.writeheader()
+#     file_writer.writerow({"Имя": "Саша", "Возраст": 6})
+#     file_writer.writerow({"Имя": "Маша", "Возраст": 15})
+#     file_writer.writerow({"Имя": "Вова", "Возраст": 14})
 
-print(users)
-
-max_users = ' and '.join(users)
-print(max_users)
-
-e = 's' if len(users) > 1 else ''
-print(f'user{e} {max_users} completed {max_complete} TODOs')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# data = [{
+#     'hostname': 'sw1',
+#     'location': 'London',
+#     'model': '3750',
+#     'vendor': 'Cisco'
+# }, {
+#     'hostname': 'sw2',
+#     'location': 'Liverpool',
+#     'model': '3850',
+#     'vendor': 'Cisco'
+# }, {
+#     'hostname': 'sw3',
+#     'location': 'Liverpool',
+#     'model': '3650',
+#     'vendor': 'Cisco'
+# }, {
+#     'hostname': 'sw4',
+#     'location': 'London',
+#     'model': '3650',
+#     'vendor': 'Cisco'
+# }]
+#
+# with open('dict_writer.csv', 'w') as f:
+#     writer = csv.DictWriter(f, delimiter=';', lineterminator='\r', fieldnames=data[0].keys())
+#     writer.writeheader()
+#     for d in data:
+#         writer.writerow(d)
 
 
 
