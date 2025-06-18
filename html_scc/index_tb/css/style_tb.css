@@ -1,0 +1,28 @@
+body{
+    background: url(../img/pattern.png);
+}
+table{
+    background-color: white;
+	border-collapse: collapse;
+    width: 750px;
+	height: 260px;
+	margin: 0 auto;
+	box-shadow: 0 0 5px 2px rgb(200, 200, 200);
+}
+th{
+    background: url(../img/tablebg.jpg);
+    border: 2px solid rgb(200, 200, 200);
+    border-collapse: collapse
+
+}
+td{ border: 2px solid rgb(200, 200, 200);
+	border-collapse: collapse;
+    text-align: center;
+	height: 40px;
+}
+.row{
+    background-color: rgb(200, 200, 200);
+}
+
+
+
