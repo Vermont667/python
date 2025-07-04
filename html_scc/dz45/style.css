@@ -45,6 +45,7 @@
         margin-left: 450px;
         margin-top: 250px;
         height: 95px;
+        transform: rotate(360deg);
     }
     100%{
         margin-left: 600px;
