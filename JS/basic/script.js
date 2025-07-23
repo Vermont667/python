@@ -632,40 +632,318 @@ false => 0, 0.0, '', false, null, undefined, NaN
 // res.style.textDecoration = 'line-through';
 
 
-let js = ['нужно', "учить", "JavaScript"];
-console.log(js);
+// let js = ['нужно', "учить", "JavaScript"];
+// console.log(js);
 
-// конец массива
-console.log(js.pop());
-console.log(js);
+// // конец массива
+// console.log(js.pop());
+// console.log(js);
 
-js.push("JavaScript", '!');
-console.log(js);
+// js.push("JavaScript", '!');
+// console.log(js);
 
-// начало массива
-console.log(js.shift());
-console.log(js);
+// // начало массива
+// console.log(js.shift());
+// console.log(js);
 
-js.unshift('Почему', "нужно");
-console.log(js);
+// js.unshift('Почему', "нужно");
+// console.log(js);
 
-// срез
-let arr = js.slice(1, 3);
-console.log(arr);
-console.log(js.slice(1));
+// // срез
+// let arr = js.slice(1, 3);
+// console.log(arr);
+// console.log(js.slice(1));
 
-// любая часть массива
-js.splice(0, 1);
-console.log(js);
+// // любая часть массива
+// js.splice(0, 1);
+// console.log(js);
 
-js.splice(0, 2, 'Мы', "изучаем");  //замена элементов начиная с индекса
-console.log(js);
+// js.splice(0, 2, 'Мы', "изучаем");  //замена элементов начиная с индекса
+// console.log(js);
 
-js.splice(2, 0, 'сложный', "язык")  //добавление элементов начиная с индкса
-console.log(js);
+// js.splice(2, 0, 'сложный', "язык")  //добавление элементов начиная с индкса
+// console.log(js);
 
-js.splice(-3, 0, "но", "очень", "интересный");  // начиная с -3 удалчет 0 элементов
-console.log(js);
+// js.splice(-3, 0, "но", "очень", "интересный");  // начиная с -3 удалчет 0 элементов
+// console.log(js);
 
+// let str = js.join(" ");
+// console.log(str)
+
+// js.reverse();  // Разворачивает массив
+// console.log(js);
+
+// js.sort();
+// console.log(js);
+
+// let n = [1, 5, 15, 2];
+// n.sort((a, b) => a - b);
+// console.log(n);
+
+// let st = ["Фамилия", "Имя", "Отчество"]
+// let fio = new Array(3);
+
+// for(let i = 0; i < fio.length; i++){
+//     // fio[i] = prompt('Введите данные:\n' + st[i]);
+//     fio[i] = prompt('Введите данные:', st[i]);  
+// }
+
+// alert(fio.join(' '))
+
+
+// Функции
+
+// Fuction Declaration
+
+// function caption(a, b, c){
+//     let res = a + b + c;
+//     return res;
+// }
+
+// let test = caption(10, 20, 30);
+// console.log(test);
+
+
+// function showArrayContent(arrayToShow) {
+//     if(arrayToShow.length == 1){
+//         return arrayToShow;
+//     } else {
+//         let last = arrayToShow.pop();
+//         let str = arrayToShow.join(', ');
+//         let res = str + ' и ' + last;
+//         return res; 
+//     }
+// }
+// let a = new Array('Текст');
+// let b = new Array('день', 'ночь');
+// let c = new Array('зима', 'весна', 'лета', 'осень');
+
+// alert(showArrayContent(a)); // Выводим содержимое массивов,
+// alert(showArrayContent(b)); // используя созданную выше функцию.
+// alert(showArrayContent(c));
+
+
+// function Expression
+
+// let sum1 = function(a, b){  
+//     return a + b;
+// }
+
+// alert(sum1(2, 3));
+
+
+// Immediately Invoken Function Expression (IIFE) - самовызывающаяся функция (анонимная функция)
+
+// (function(){
+//     alert('Привет мир')
+// }());
+
+// (function(n){
+//     alert(n * n);
+// })(4)
+
+
+// Arrow Function
+
+// // let test = (a, b, c) => a + b + c; 
+// let test = (a, b, c) => {
+//     let res = a + b + c;
+//     return res;
+// }
+
+// alert(test(10, 20, 30));
+
+
+// let hello = () => alert('hello');
+// hello();
+
+// let hello = n => alert('hello, ' + n);
+// hello('Igor');
+
+
+
+// document.writeln(Math.floor(7.9) + '<br>');  // округление вниз
+// document.writeln(Math.ceil(7.1) + '<br>');  // округление вверх
+// document.writeln(Math.round(7.1) + '<br>');  // по законам математики
+
+
+// (function(min, max){
+//     document.writeln(Math.floor(Math.random() * (max - min) + min) + '<br>');  // по умолчанию random случайное число от 0 до 1(не включая)
+// })(2, 9);
+
+// document.writeln(Math.floor(Math.random() * 9)+ '<br>');  // от 0 до 9
+// document.writeln(Math.floor(Math.random() * 7 + 2)+ '<br>');  // от 2 до 9
+// document.writeln(Math.floor(Math.random() * 8 + 7) + '<br>'); // от 7 до 15
+
+
+// let randMas = ["Цикл", "Массив", "Условие", "Функция"];
+// document.writeln(pickRandom(randMas))
+
+// function pickRandom(mas){
+//     return mas[parseInt(Math.random() * mas.length)];
+// }
+
+
+// области видимости
+
+// let j = 2;  // глобальная
+
+// if(true){
+//     let i = 1;  // локальная
+//     console.log(j);
+// }
+
+// console.log(i)
+
+// let j = 2;
+
+// if(true){
+//     j = 1; 
+// }
+
+// console.log(j)
+
+// let j = 2;
+
+// function ch(){
+//     j = 1; 
+// }
+
+// ch()
+// console.log(j)
+
+
+
+// document.writeln('<div id="block"></div>');
+// let id = document.getElementById("block");
+
+// id.style.width = '100px';
+// id.style.height = '100px';
+// // id.style.background = 'rgb(255, 0, 0)';
+
+// let createColor = () => {
+//     let r = Math.floor(Math.random() * 256);
+//     let g = Math.floor(Math.random() * 256);
+//     let b = Math.floor(Math.random() * 256);
+//     // id.style.background = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+//     id.style.background = `rgb(${r}, ${g}, ${b})`;
+// }
+
+// createColor();
+
+
+// function test(a, b){
+//     alert('a='+5+', b='+b);
+// }
+
+// test(1);
+// test(1, 2);
+// test(1, 2, 3);
+
+// function test(){
+//     console.log(arguments[0]);
+//     console.log(arguments[1]);
+//     console.log(arguments[2]);
+//     console.log(arguments[3]);
+// }
+
+// test(1, 2, 3);
+
+
+// function sum(){
+//     let res = 0;
+//     for(let i = 0; i < arguments.length; i++){
+//         res += arguments[i];
+//     }
+//     let a = 'hello';
+//     return [res, a];
+// }
+
+// document.writeln(sum() + '</br>');
+// document.writeln(sum(1) + '</br>');
+// document.writeln(sum(1, 2) + '</br>');
+// document.writeln(sum(1, 2, 3) + '</br>');
+// document.writeln(sum(1, 2, 3, 4) + '</br>');
+// document.writeln(sum(1, 2, 3, 4, 5) + '</br>');
+
+
+// function hello(name='незнакомец'){
+//     // name = name || 'незнакомец';
+//     document.writeln('Привет, ' + name + '! <br>');
+// }
+
+// hello('Катя');
+// hello();
+
+
+// function square(width=300, height=200, fon='green'){
+//     document.writeln('<div id="shape"></div>');
+//     let div = document.querySelector('#shape');
+
+//     div.style.background = fon;
+//     div.style.width = width + 'px';
+//     div.style.height = height + 'px';
+// }
+
+// square(350, 450, 'gold');
+// square(150, 100);
+// square(150);
+// square();
+
+
+// function hello(){
+//     alert("Привет");
+// }
+
+// alert(hello);
+
+
+// let str = 'I\"m a JavaScript \'programmer\''
+
+// document.writeln(str + '<br>');
+// document.writeln(str.length + '<br>');
+// document.writeln(str [2] + '<br>');
+
+// // str[2] = 'y'
+// str = str[2] + 'y';
+// document.writeln(str + '<br>');
+
+
+// let s = "абббабввбабвбвббабвббабв";
+// counterLetters(s);
+
+// function counterLetters(str){
+//     let letters = ["а", "б", "в"];
+//     for(let i = 0; i < letters.length; i++){
+//         let count = 0;
+//         for(let j = 0; j < str.length; j++){
+//             if(str[j] == letters[i]){
+//                 count++;
+//             }
+//         }
+//         document.writeln("Символ '" + letters[i] + "' встретился " + count + " раз<br>");
+//     }
+// }
+
+
+// let str = "I\'m a JavaScript \"programmer\""
+// document.writeln(str[6] + '<br>');
+// document.writeln(str.charAt(6) + '<br>');
+
+// document.writeln(str.toLowerCase() + '<br>');  //нижний регистр
+// document.writeln(str.toUpperCase() + '<br>');  //верхний регистр
+// document.writeln(str + '<br>');
+
+
+let n = prompt("Введите имя", "ниКиТа");
+alert(first(n));
+
+function first(str){
+    let firstLetter = str.charAt(0).toUpperCase();
+    for(let i = 1; i <str.length; i++){
+        firstLetter += str[i].toLowerCase();
+    }
+    return firstLetter;
+}
 
 
