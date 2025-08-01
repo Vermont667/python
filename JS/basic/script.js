@@ -935,15 +935,220 @@ false => 0, 0.0, '', false, null, undefined, NaN
 // document.writeln(str + '<br>');
 
 
-let n = prompt("Введите имя", "ниКиТа");
-alert(first(n));
+// let n = prompt("Введите имя", "ниКиТа");
+// alert(first(n));
 
-function first(str){
-    let firstLetter = str.charAt(0).toUpperCase();
-    for(let i = 1; i <str.length; i++){
-        firstLetter += str[i].toLowerCase();
-    }
-    return firstLetter;
-}
+// function first(str){
+//     let firstLetter = str.charAt(0).toUpperCase();
+//     for(let i = 1; i <str.length; i++){
+//         firstLetter += str[i].toLowerCase();
+//     }
+//     return firstLetter;
+// }
+
+
+// let str = "I\'m a JavaScript \"programmer\"";
+// let str1 = 'Я учу JavaScript. Мне нравится JavaScript.';
+// str = str.concat(str1);
+// document.writeln(str + '<br>');
+
+// document.writeln(str.indexOf("JavaScript", 7) + '<br>');
+// document.writeln(str.lastIndexOf("JavaScript") + '<br>');
+
+// let email;
+// do{
+//     email = prompt('Введите email: ');
+//     if(email.indexOf('@') == -1){
+//         alert("Некорректно. Повторите операцию");
+//         continue;
+//     }
+//     break;
+// }while(true)
+
+// alert("Спасибо за сотрудничество")
+
+// document.writeln(str.split(".") + "<br>");
+// console.log(str.split(".", 2))
+
+// document.writeln(str.slice(0, 3) + '<br>');
+// document.writeln(str.slice(3, 0) + '<br>');
+// document.writeln(str.slice(-23, -10) + '<br>');
+// document.writeln(str.substring(0, 3) + '<br>');
+// document.writeln(str.substring(3, 0) + '<br>');
+// document.writeln(str.substring(-10) + '<br>');
+
+
+// let style = prompt('Введите свойство CSS', 'list-style-type');
+// alert(replace(style));
+
+// function replace(str){
+//     let mas = str.split("-");  // ["background", "color"]
+//     for(let i = 1; i < mas.length; i++){
+//         mas[i] = mas[i].charAt(0).toUpperCase() + mas[i].slice(1);
+//     }
+//     return mas.join('');
+// }
+
+
+// function loadStr(){
+//     alert('Страница была загружена');
+// }
+
+// let m = document.getElementById('mes');
+
+// function over(){
+//     m.style.color='red';
+// }
+
+// function out(){
+//     m.style.color='blue';
+// }
+
+// function change(){
+//     let id = document.getElementById('title');
+//     id.style.color='blue';
+// }
+
+// function randomBg(){
+//     document.body.style.background=`rgb(${rand()}, ${rand()}, ${rand()})` 
+// }
+
+// function rand(){
+//     return Math.floor(Math.random()*256);
+// }
+
+// let image = document.getElementById('image')
+// function on(){
+//     image.src = 'night.png'
+// }
+
+// function off(){
+//     image.src = 'day.png'
+// }
+
+
+// but.onclick = function(){
+//     alert('спасибо')
+// }
+
+
+// function change(id){
+//     id.innerHTML = 'Новый текст';
+// }
+
+
+// function setColor(elem){
+//     document.body.style.background = elem.className
+// }
+
+
+// let el = document.querySelector('#but');
+
+// el.addEventListener('click', function(){
+//     el.innerHTML='Новый текст';
+// });
+
+// el.addEventListener('contextmenu', setColor)
+    
+// function setColor(){
+//     el.style.color = 'green';
+//     el.style.background = 'yellow'
+// }
+
+
+// document.addEventListener("mousemove", function(event){
+//     let c = document.querySelector('#elem');
+//     let x = event.clientX
+//     let y = event.clientY
+//     c.textContent = 'X = ' + x + ", Y = " + y;
+
+//     c.addEventListener('dblclick', function(event){
+//         event.target.style.background='red'
+//     })
+// })
+
+
+// let el = document.querySelector('#but');
+
+// el.addEventListener("click", handler);
+
+// function handler(){
+//     alert("Thanks")
+//     el.removeEventListener("click", handler)
+// }
+
+
+// setTimeout(функция, задержка)
+
+// setTimeout('alert("Текст")', 3000);
+
+// setTimeout(hello, 1000, 'Привет', 'Друг');
+
+// function hello(h, n){
+//     alert(h + ", " + n + '!');
+// }
+
+
+// document.writeln("<div id='dt'>Создание анимированного текста</div>");
+
+// let id = document.querySelector("#dt");  // "<div id='dt'>Создание анимированного текста</div>"
+// let text = document.querySelector("#dt").innerHTML;  //Создание анимированного текста
+
+// let i = 0;
+
+// window.addEventListener('load', animText);
+
+// function animText(){
+//     id.innerHTML = text.substring(0, i);
+//     i++;
+//     if(i > text.length){
+//         i = 0;
+//     }
+//     setTimeout(animText, 50)
+// }
+
+
+// let d = new Date();
+// document.writeln(d + '<br>');
+// document.writeln(d.toDateString() + '<br>');
+// document.writeln(d.getFullYear() + '<br>');  // 2025
+// document.writeln(d.getMonth() + '<br>');  // 7, от 0 по 11
+// document.writeln(d.getDate() + '<br>');  // 1
+// document.writeln(d.getDay() + '<br>');  // 5, от 0 - воскресенье, 6 - суббота
+
+
+// let mounth = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
+// let day = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
+
+// let d = new Date();
+// let fullDate = 'Сегодня: ' + d.getDate() + ' ' + mounth[d.getMonth()] + ' ' + d.getFullYear() + ' год, ' + day[d.getDay()];
+
+// document.writeln(fullDate);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

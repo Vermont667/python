@@ -21,12 +21,13 @@ td{
     padding: 30px;
 }
 
-td {
+.column0 {
     width: 15%;
     vertical-align: top;
 }
 
 .top {
+    width: 20%;
     text-align: top;
     margin: 0;
 }

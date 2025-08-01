@@ -2,7 +2,7 @@ let a = ["Январь", "Февраль", "Март", "Апрель", "Май",
 
     
 document.writeln('<div id="c" class="mounth"></div>')
-    let d = document.querySelector('.mounth')   
+let d = document.querySelector('#c')   
     for(let i = 0; i < a.length; i++){
         let createColor = () => {
         let r = Math.floor(Math.random() * 256);
