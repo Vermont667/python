@@ -1,0 +1,63 @@
+.ima{
+    position: relative;
+    width: 578px;
+    height: 1280px;
+}
+.ima img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#text1 {
+    position: absolute;
+    margin: 165px 0 0 330px;
+    /* -webkit-text-stroke: 0.3px white; */
+    background-color: rgba(255, 255, 255, 0.523);
+    /* opacity: 0;
+    transform: opacity 1s ease-in-out; */
+}
+
+/* #text1 .visible {
+    opacity: 1;
+} */
+
+.red {
+    position: absolute;
+    width: 150px;
+    margin: 236px 0 0 145px;
+    transform: skewY(-13deg);
+    animation: in 1s;
+}
+
+@keyframes in {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+/* .re {
+    position: relative;
+    display: inline-block;
+}
+
+.primary {
+    display: block;
+    width: 578px;
+    height: 1280px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.overlay .active {
+    display: block;
+    opacity: 1;
+} */
