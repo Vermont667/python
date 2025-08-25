@@ -1,5 +1,7 @@
 'use strict';
 
+// const { createElement } = require("react");
+
 /* let message;  // let, const, var
 message = 'Hello';
 console.log(message)
@@ -1321,15 +1323,211 @@ false => 0, 0.0, '', false, null, undefined, NaN
 // console.log('b = ', b);
 
 
-document.writeln("<input type='number' min='1' max='3'>");
-document.writeln("<input type='button' class='btn' value='кнопка'>");
+// document.writeln("<input type='number' min='1' max='3'>");
+// document.writeln("<input type='button' class='btn' value='кнопка'>");
 
-let btn = document.querySelector('.btn');
+// let btn = document.querySelector('.btn');
 
-btn.addEventListener('click', function(){
-    let el = document.querySelector('input').value;
-    console.log(el)
-})
+// btn.addEventListener('click', function(){
+//     let el = document.querySelector('input').value;
+//     console.log(el)
+// })
+
+
+
+// alert(document.documentElement.innerHTML);
+// alert(document.body.innerHTML);
+
+// let myTitle = document.querySelector('h1').innerHTML;
+// console.log(myTitle);
+
+// // let par = document.querySelector('p').firstChild.nodeValue;
+// // let par = document.querySelector('p').childNodes[0].nodeValue;
+// // let par = document.querySelector('p').nodeName;
+// let par = document.querySelector('p').firstChild.nodeType;
+// console.log(par)
+
+
+// let elem = document.querySelector('#root');
+// let tag = document.createElement("p");  // <p></p>
+// let node = document.createTextNode("Новый текст!!!"); // Новый текст!!!
+// tag.append(node);  // <p>Новый текст!!!</p>
+// elem.append(tag); // добавляет новый элемент последним дочерним элементом внутри родительского
+// elem.prepend(tag); // добавляет новый элемент первым дочерним элементом внутри родительского
+// elem.before(tag);  // добавляет новый элемент до выбранного id
+// elem.after(tag);  // добавляет новый элемент после выбранного id
+// elem.replaceWith(tag);  //заменяет новым элементом выбранный id 
+
+
+
+// let list = document.querySelector('ul');
+// let newItem = document.createElement('li');
+// newItem.innerHTML = 'Новый <i>элемент списка</i>';
+// list.append(newItem);
+
+
+// document.querySelector('#move').addEventListener('click', change);
+// document.querySelector('#add').addEventListener('click', add);
+// let i = 1;
+
+// function add(){
+//     let elem = document.createElement('li');
+//     elem.innerHTML = 'Water ' + i;
+//     document.querySelector('#list2').append(elem);
+//     // list2.append(elem)
+//     i++;
+// }
+
+// function change(){
+//     let elem = document.querySelector('#list2').lastChild;
+//     document.querySelector('#list1').append(elem);
+// }
+
+
+
+// let div = document.querySelector('#root');
+// div.insertAdjacentHTML('beforebegin', '<p>До выбранного элемента</p>');
+// div.insertAdjacentHTML('afterend', '<p>после выбранного элемента</p>');
+// div.insertAdjacentHTML('afterbegin', '<p>Первым внутри выбранного выбранного элемента</p>')
+// div.insertAdjacentHTML('beforeend', '<p>Последним внутри выбранного выбранного элемента</p>')
+
+// let first = document.querySelector('#p1');
+// // first.remove()
+// let second = document.querySelector('#p2');
+// second.after(first)
+
+
+
+// let ul = document.querySelector('ul');
+// let clone = ul.cloneNode(true);
+
+// clone.querySelector('li').innerHTML = 'Начало мклонируемых элментов';
+// ul.after(clone);
+
+
+// let list = document.querySelector('.list');
+// list.insertAdjacentHTML('beforebegin', '<h2>Список <h2><hr>');
+// let list_inner = document.querySelector('h2');
+// list_inner.insertAdjacentText('beforeend', 'планет');
+// list.insertAdjacentHTML('afterend', '<hr>');
+// let hr = document.querySelectorAll('hr')[1];
+// let h4 = document.createElement('h4');
+// h4.innerHTML = 'Конец списка';
+// hr.insertAdjacentElement('afterend', h4);
+
+// let idRemove = setInterval(function(){
+//     let li = document.querySelector('.list > li:last-child');
+//     if(li === null){
+//         clearInterval(idRemove);
+//         // alert('Список удален')
+//         list.insertAdjacentHTML('afterbegin', '<li>Список удален</li>')
+//     }else{
+//         li.remove(); 
+//     }
+    
+// }, 500);
+
+
+
+// let div = document.querySelector('div');
+// div.className = 'alert';
+// let activeDiv = document.querySelector('.active');
+// activeDiv.classList.add('hidden');
+// // activeDiv.classList.remove('hidden');
+// activeDiv.classList.toggle('hidden');
+// activeDiv.classList.replace('active', 'alert');
+
+
+
+// let frogImg = document.querySelector('#greenFrog');
+// console.log(frogImg.id);
+// console.log(frogImg.className);
+// console.log(frogImg.alt);
+// console.log(frogImg.title);
+// console.log(frogImg.src);
+
+// frogImg.title = 'Новый текст подсказки';
+// console.log(frogImg.getAttribute('src'));
+// console.log(frogImg.getAttribute('data-frog'));
+
+// frogImg.setAttribute('src', '4.jpg');
+// frogImg.removeAttribute('src');
+
+// console.log(frogImg.hasAttribute('src'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
