@@ -1,0 +1,23 @@
+p{
+    width: 400px;
+    margin: 5px 0 10px 30px;
+    border: 1px solid gray;
+    padding: 10px 0 10px 10px;
+}
+
+#pers{
+    display: flex;
+    margin-left: 40px;
+    size: 125px;
+}
+
+img{
+    margin-left: 20px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+#name{
+    margin-left: 5px;
+    margin-top: 6px;
+}

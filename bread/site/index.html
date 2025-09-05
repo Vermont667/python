@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Создать аккаунт</h1>
+            <p>Заполните форму ниже для регистрации</p>
+        </div>
+        
+        <form class="form" id="registrationForm">
+            <div class="form-group">
+                <label for="name">Имя</label>
+                <input type="text" id="name" placeholder="Введите ваше имя" required>
+                <div class="error" id="nameError">Пожалуйста, введите ваше имя</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Введите ваш email" required>
+                <div class="error" id="emailError">Пожалуйста, введите корректный email</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" placeholder="Создайте пароль" required>
+                <div class="error" id="passwordError">Пароль должен содержать не менее 6 символов</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirmPassword">Подтвердите пароль</label>
+                <input type="password" id="confirmPassword" placeholder="Повторите пароль" required>
+                <div class="error" id="confirmError">Пароли не совпадают</div>
+            </div>
+            
+            <button type="submit" class="btn">Зарегистрироваться</button>
+        </form>
+        
+        <div class="footer">
+            Уже есть аккаунт? <a href="#">Войти</a>
+        </div>
+    </div>
+ <script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+    <form action="#">
+        <h2>Регистрация</h2>
+        <input type="text" class="b">Логин
+        <input type="password" class="b">Пароль
+        <input type="button" value="Войти" class="c">
+        <a href="#">Зарегистрироваться</a>
+    </form></div>
+</body>
+</html> -->

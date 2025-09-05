@@ -1,4 +1,23 @@
-let str = "Настоящие условия лицензии являются соглашением sergey@gmail.ru между корпорацией Microsoft (или, в зависимости от места вашего проживания, одним из ее аффилированных лиц) и вами. Прочтите их внимательно. Они применяются к вышеуказанному программному обеспечению, включая носители, на которых оно распространяется (если они есть). Условия лицензионного соглашения, предоставляемые в печатном виде, которые могут mister.900@gmail.com сопровождать программное обеспечение, имеют преимущественную силу над любыми условиями лицензии, предоставляемыми в электронном виде. Эти условия tester_3333.mig@bk.ru распространяются также на все...";
-let reg = /([0-9a-z_.]+@[0-9a-z_^\.]+\.[a-z]{2,3})/ig;
-str = str.replace(reg, "<span style='color:blue'>$1</span>");
-document.querySelector('div').innerHTML = str;
+
+let but = document.querySelector('input[type="button"]');
+but.addEventListener('click', smsUser);
+
+function smsUser(){
+    let sms = document.querySelector('textarea').value;
+    let name = document.querySelector('input[type="text"]').value;
+    console.log(but);
+    let reg = /([\w.]+@[\w.]+\.[a-z]{2,3})/ig;
+    sms = sms.replace(reg, "<span style='color: blue'>$1</span>")
+    // document.writeln(`
+    //     <fieldset>
+    //         <legend>${name}</legend>
+    //         <div>${sms}<div>
+    //     </fieldset>
+    // `)
+    let form = document.querySelector('form');
+    form.insertAdjacentHTML('beforeend', `
+         <fieldset>
+             <legend>${name}</legend>
+             <div>${sms}<div>
+         </fieldset>`)
+}
