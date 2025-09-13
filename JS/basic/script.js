@@ -13,7 +13,7 @@ let b, c;
 let d = 5, e = 2;
 
 let firstName = 'Irina'
-console.log(firstName) */ 
+console.log(firstName) */
 
 
 // const week = 7;
@@ -1051,7 +1051,7 @@ false => 0, 0.0, '', false, null, undefined, NaN
 // });
 
 // el.addEventListener('contextmenu', setColor)
-    
+
 // function setColor(){
 //     el.style.color = 'green';
 //     el.style.background = 'yellow'
@@ -1424,7 +1424,7 @@ false => 0, 0.0, '', false, null, undefined, NaN
 //     }else{
 //         li.remove(); 
 //     }
-    
+
 // }, 500);
 
 
@@ -1473,7 +1473,7 @@ false => 0, 0.0, '', false, null, undefined, NaN
 // function content(){
 //     // alert(txt.value);
 //     console.log(txt.value);
-    
+
 // }
 
 
@@ -1578,7 +1578,7 @@ select.selectedIndex - номер выбранного <option> (index)
 //     // console.log(options);  // массив
 //     let code = options[citis].value
 //     // console.log(code);
-    
+
 //     let div = document.querySelector('#image');
 //     div.innerHTML = '<img src="img/'+ code +'.png">'
 // }
@@ -1603,7 +1603,7 @@ select.selectedIndex - номер выбранного <option> (index)
 //     let login = reg.login.value;
 //     let psd1 = reg.password1.value;
 //     let psd2 = reg.password2.value;
-    
+
 //     if(!(login && psd1 && psd2)){
 //         alert('Все поля должны быть заполненны');
 //     }
@@ -1950,60 +1950,252 @@ $ - конец строки (после последовательности н�
 
 
 
+// let info = '{"first_name":"Ivan","age":36,"mother":{"name":"Olga"},"children":["Kate","Igor","Misha"],"married":true,"dog":null}';
+// console.log(info);
+
+// let person = JSON.parse(info);
+// console.log(person);
+
+// person.first_name = 'Petr';
+
+// delete(person.age);
+
+// person.work = 'programmer';
+
+// // delete(person.children[1])
+// person.children.splice(1, 1);
+// person.children.push("Ira")
+
+// for(let i in person){
+//     document.writeln(i + ': ' + person[i] + '<br>')
+// }
+
+// let personString = JSON.stringify(person);
+// console.log(personString);
+
+
+
+// let request = new XMLHttpRequest();
+// request.open('GET', 'data.txt'); // (method, url, async, login, password)
+
+// request.send();
+// request.onreadystatechange = function(){
+//     if((request.readyState == 4) && (request.status == 200)){
+//         document.writeln(request.response);
+//     }
+// }
 
 
 
 
+// let a = 'global';
+// function outer(){
+//     let b = 'outer';
+//     function inner(){
+//         let c = 'inner';
+//         console.log('c', c);
+//         console.log('b', b);
+//         console.log('a', a);
+
+//     }
+//     inner();
+// }
+
+// outer();
+
+
+// function createCalc(n){
+//     return function(){
+//         console.log(10 * n);
+//     }
+// }
+
+// let calc = createCalc(5);
+// calc();
+
+
+// function increment(n){
+//     return function(num){
+//         return n + num;
+//     }
+// }
+
+// let one = increment(1);
+// console.log(one(10));
+// console.log(one(20));
+
+// let ten = increment(10);
+// console.log(ten(10));
+// console.log(ten(20));
+
+
+// function urlGenerator(domain){
+//     return function(url){
+//         return `https://${url}.${domain}`;
+//     }
+// }
+
+// let ruUrl = urlGenerator('ru');
+// console.log(ruUrl('yandex'));
+// console.log(ruUrl('mail'));
+
+// let comUrl = urlGenerator('com');
+// console.log(comUrl('google'));
+// console.log(comUrl('youtube'));
+
+
+// let person = {
+//     age: 24,
+//     name: 'Katya',
+//     job: 'Programmer',
+//     displayInfo: function(ms){
+//         let self = this;
+//         setTimeout(function(){
+//             console.log('inner:', self);
+//             console.log('name: ', self.name);
+//             console.log('age: ', self.age);
+//             console.log('job: ', self.job); 
+//         }, ms);
+
+//     }
+// }
+// person.displayInfo(2000);
+
+// let person = {
+//     age: 24,
+//     name: 'Katya',
+//     job: 'Programmer',
+//     displayInfo: function(ms){
+//         setTimeout(function(){
+//             console.log('inner:', this);
+//             console.log('name: ', this.name);
+//             console.log('age: ', this.age);
+//             console.log('job: ', this.job); 
+//         }.bind(this), ms);
+
+//     }
+// }
+// person.displayInfo(2000);
+
+// let person = {
+//     age: 24,
+//     name: 'Katya',
+//     job: 'Programmer',
+//     displayInfo: function(ms){
+//         setTimeout(() => {
+//             console.log('inner:', this);
+//             console.log('name: ', this.name);
+//             console.log('age: ', this.age);
+//             console.log('job: ', this.job); 
+//         }, ms);
+
+//     }
+// }
+// person.displayInfo(2000);
+
+
+// function first(){
+//     setTimeout(function(){
+//         console.log('Первый');
+//         setTimeout(function(){
+//             console.log('Второй');
+//         }, 100)
+//     }, 1000);
+// }
+
+// first();
 
 
 
+// Click -> Server -> Database -> Server -> Client
+
+// console.log('Клиент: хочу получить список пользователей');
+// console.log('...');
+
+// setTimeout(function(){
+//     console.log('Сервер: запрашиваю список пользователей в БД');
+//     console.log('...');
+
+//     setTimeout(function(){
+//         console.log('БД: формирую список пользователей');
+//         console.log('...');
+
+//         setTimeout(function(){
+//             console.log('Сервер: трансформирую данные для клиента');
+//             console.log('...');
+
+//             setTimeout(function(){
+//                 console.log('Клиент: получил данные и отображаю их');
+
+//             }, 1000)
+
+//         }, 500)
+
+//     }, 500)
+
+// }, 1000)
 
 
+console.log('Клиент: хочу получить список пользователей');
+console.log('...');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let promise = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        console.log('Сервер: запрашиваю список пользователей в БД');
+        console.log('...');
+        resolve();
+    }, 1000);
+});
+// promise.then(function(){
+//     setTimeout(function(){
+//         console.log('БД: формирую список пользователей');
+//         console.log('...');
+//     }, 500)
+// })
+promise.then(function () {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            let users = [
+                {uid: 'id1', name: 'Igor'},
+                {uid: 'id2', name: 'Irina'}
+            ]
+            // reject('База данных не смогла получить список пользователей')
+            console.log('БД: формирую список пользователей', users);
+            console.log('...');
+            resolve(users)
+        }, 500)
+    })
+})
+.then(function (dbUsers) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            console.log('Сервер: трансформирую данные для клиента');
+            console.log('...');
+            let users = dbUsers.map(function(user){
+                return{
+                    id: user.uid,
+                    firstName: user.name,
+                    timeStamp: Date.now()
+                }
+            })
+            resolve(users)
+        }, 500)
+    })
+})
+.then(function (users) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            console.log('Клиент: получил данные и отображаю их', users); 
+            resolve()
+        }, 1000)
+    })
+})
+.catch(function(error){
+    console.log(error);
+})
+.finally(function(){
+    console.log('Finnaly');
+})
 
 
 
