@@ -6,30 +6,35 @@ import Search from "../components/Search";
 
 class Main extends React.Component {
     state = {
-        movies: []
+        movies: [],
+        loading: true,
+        count: 0
     }
 
     componentDidMount() {
         fetch('http://www.omdbapi.com/?apikey=aaa7b07a&s=matrix')
             .then(response => response.json())
-            .then(data => this.setState({ movies: data.Search }))
+            .then(data => this.setState({ movies: data.Search, loading: false, count: data.totalResults}))
     }
 
-    searchMovie = (str) => {
-        fetch(`http://www.omdbapi.com/?apikey=aaa7b07a&s=${str}`)
+    searchMovie = (str, type='all', page) => {
+        this.setState({loading: true})
+        fetch(`http://www.omdbapi.com/?apikey=aaa7b07a&s=${str}${type !== 'all' ? `&type=${type}` : ''}${`&page=${page}`}`)
             .then(response => response.json())
-            .then(data => this.setState({ movies: data.Search }))
+            .then(data => this.setState({ movies: data.Search, loading: false, count: data.totalResults}))
     }
 
     render() {
-        const { movies } = this.state;
+        const { movies, loading, count } = this.state;
+        // console.log(count);
+        
 
         return (
             <div className="main">
                 <div className="wrap">
-                    <Search />
+                    <Search searchMovie={this.searchMovie} totalCount={count}/>
                     {
-                        movies.length ? <MovieList movies={movies} /> : <Preloader />
+                        loading ?  <Preloader /> : <MovieList movies={movies} />
                     }
 
                 </div>
