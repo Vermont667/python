@@ -1,66 +1,69 @@
 import { useState } from 'react';
 import './App.css';
-// import Counter from './Counter';
+import Counter from './Counter';
+import Text from './Text';
 // import Person from './Person';
 // import Modal from './Modal';
 // import Item from './Item';
-import Task from './Task';
-import Form from './Form';
+// import Task from './Task';
+// import Form from './Form';
 
 
 function App() {
 
-  let [tasks, setTasks] = useState([
-    {
-      text: 'Выучить JavaScript',
-      done: false
-    },
-    {
-      text: 'Познакомиться с React',
-      done: false
-    },
-    {
-      text: 'Устроиться на работу',
-      done: false
-    },
-  ])
+  // let [tasks, setTasks] = useState([
+  //   {
+  //     text: 'Выучить JavaScript',
+  //     done: false
+  //   },
+  //   {
+  //     text: 'Познакомиться с React',
+  //     done: false
+  //   },
+  //   {
+  //     text: 'Устроиться на работу',
+  //     done: false
+  //   },
+  // ])
 
-  let addTask = text => {
-    let newTask = [...tasks, { text }];
-    setTasks(newTask)
-  }
+  // let addTask = text => {
+  //   let newTask = [...tasks, { text }];
+  //   setTasks(newTask)
+  // }
 
-  let doneTask = index => {
-    if (tasks[index].done === false) {
-      let newTask = [...tasks];
-      newTask[index].done = true;
-      setTasks(newTask)
-    } else {
-      let newTask = [...tasks]
-      newTask[index].done = false;
-      setTasks(newTask)
-    };
-  }
+  // let doneTask = index => {
+  //   if (tasks[index].done === false) {
+  //     let newTask = [...tasks];
+  //     newTask[index].done = true;
+  //     setTasks(newTask)
+  //   } else {
+  //     let newTask = [...tasks]
+  //     newTask[index].done = false;
+  //     setTasks(newTask)
+  //   };
+  // }
 
-  let deleteTask = index => {
-    let newTask = [...tasks];
-    newTask.splice(index, 1);
-    setTasks(newTask);
-  }
+  // let deleteTask = index => {
+  //   let newTask = [...tasks];
+  //   newTask.splice(index, 1);
+  //   setTasks(newTask);
+  // }
+
+  let [isCounter, setCounter] = useState(true)
 
   return (
 
     <div className="App">
-      {
-        console.log(tasks)
 
-      }
       <div className='task-list'>
-        {/* <Counter />
-      <Person /> */}
+        <button onClick={() => setCounter(!isCounter)}>Toogle Counter</button>
+        {isCounter && <Counter />}
+        <Text />
+        
+      {/* <Person /> */}
         {/* <Modal /> */}
         {/* <Item /> */}
-        {
+        {/* {
           tasks.map((task, index) =>
             <Task
               key={index}
@@ -71,7 +74,7 @@ function App() {
             />
           )
         }
-        <Form addTask={addTask} />
+        <Form addTask={addTask} /> */}
       </div>
     </div>
   );
