@@ -5354,11 +5354,11 @@
 #     UPDATE cars SET price = price + 100
 #     ''')
 
-    # cur.execute('INSERT INTO cars VALUES(1, "Renault", 22000)')
-    # cur.execute('INSERT INTO cars VALUES(2, "Volvo", 29000)')
-    # cur.execute('INSERT INTO cars VALUES(3, "Mercedes", 57000)')
-    # cur.execute('INSERT INTO cars VALUES(4, "Bentley", 35000)')
-    # cur.execute('INSERT INTO cars VALUES(5, "Audio", 52000)')
+# cur.execute('INSERT INTO cars VALUES(1, "Renault", 22000)')
+# cur.execute('INSERT INTO cars VALUES(2, "Volvo", 29000)')
+# cur.execute('INSERT INTO cars VALUES(3, "Mercedes", 57000)')
+# cur.execute('INSERT INTO cars VALUES(4, "Bentley", 35000)')
+# cur.execute('INSERT INTO cars VALUES(5, "Audio", 52000)')
 
 # con.commit()
 # con.close()
@@ -5553,53 +5553,136 @@
 #     main()
 
 
-from parsers import Parser
-
-
-def main():
-    pars = Parser('https://www.ixbt.com/live/index/news/', 'news.txt')
-    pars.run()
-
-
-if __name__ == '__main__':
-    main()
-
-
-
+# from parsers import Parser
+#
+#
+# def main():
+#     pars = Parser('https://www.ixbt.com/live/index/news/', 'news.txt')
+#     pars.run()
+#
+#
+# if __name__ == '__main__':
+#     main()
 
 
 
+# from jinja2 import Template
+
+
+# name = 'Игорь'
+# age = 28
+#
+# tm = Template('Мне {{a*2}} лет. Меня зовут {{ n.upper() }}')
+# msg = tm.render(n=name, a=age)
+# print(msg)
+
+
+# per = {'name': 'Игорь', 'age': 28}
+#
+# tm = Template("Мне {{ p.age }} лет. Меня зовут {{ p['name'] }}")
+# msg = tm.render(p=per)
+# print(msg)
+
+
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def get_name(self):
+#         return self.name
+#
+# per = Person('Игорь', 28)
+#
+# # tm = Template("Мне {{ p.age }} лет. Меня зовут {{ p['name'] }}")
+# tm = Template("Мне {{ p.age }} лет. Меня зовут {{ p.get_name() }}")
+# msg = tm.render(p=per)
+# print(msg)
+
+
+# cities = [
+#     {'id': 1, 'city': 'Москва'},
+#     {'id': 2, 'city': 'Смоленск'},
+#     {'id': 3, 'city': 'Минск'},
+#     {'id': 4, 'city': 'Воронеж'},
+#     {'id': 5, 'city': 'Ярославль'},
+# ]
+#
+# link = '''
+# <select>
+# {% for c in cities %}
+#     {% if c.id > 3 %}
+#         <option value='{{ c['id'] }}'>{{ c.city }}</option>
+#     {% elif c.city == 'Москва' %}
+#         {{ c.city }}
+#     {% else %}
+#         <option>{{ c.city }}</option>
+#     {% endif %}
+# {% endfor %}
+# </select>
+# '''
+#
+# tm = Template(link)
+# msg = tm.render(cities=cities)
+# print(msg)
+
+
+# cars = [
+#     {'model': 'Audi', 'price': 23000},
+#     {'model': 'Scoda', 'price': 17000},
+#     {'model': 'Renault', 'price': 44000},
+#     {'model': 'Wolksvagen', 'price': 21000}
+# ]
+#
+# # cars = [9, 8, 6, 5, 4, 2]
+#
+# # tpl = '{{ cs|max(attribute="price") }}'
+# tpl = '{{ (cs|max(attribute="price")).model }}'
+# tm = Template(tpl)
+# msg = tm.render(cs=cars)
+# print(msg)
+
+
+# html = '''
+# {% macro input_func(name, value='', type='text', size=20) %}
+#     <input type='{{ type }}' name='{{ name }}' value='{{ value }}' size='{{ size }}'>
+# {% endmacro %}
+#
+# <p>{{ input_func('username') }}</p>
+# <p>{{ input_func('email') }}</p>
+# <p>{{ input_func('password', type='password') }}</p>
+# '''
+#
+# tm = Template(html)
+# msg = tm.render()
+# print(msg)
 
 
 
+from jinja2 import Environment, FileSystemLoader
+
+# person = [
+#     {'name': 'Алексей'},
+#     {'name': 'Никита'},
+#     {'name': "Виталий"}
+# ]
+#
+# file_loader = FileSystemLoader('templates')
+# env = Environment(loader=file_loader)
+#
+# tm = env.get_template('index.html')
+# msg = tm.render(users=person, title='About Jinja')
+#
+# print(msg)
 
 
+file_loader = FileSystemLoader('templates')
+env = Environment(loader=file_loader)
 
+tm = env.get_template('about.html')
+msg = tm.render()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(msg)
 
 
 
