@@ -13,8 +13,7 @@ function P({ id, name, onClick, isInvited }) {
                         type="checkbox" 
                         id={id} 
                         onClick={() => onClick(id)} 
-                    />
-                    <span>{name}</span>
+                    />{name}
                 </label>
                 <div className="button">
                     <b>{isInvited ? '+' : '-'}</b>
