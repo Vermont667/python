@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0d64eb4a-6cf2-46c0-90eb-a2114ee03590" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../dz73/dz/blogs/static/blogs/article_54839.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dz73/dz/blogs/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dz73/dz/blogs/templates/blogs/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dz73/dz/blogs/templates/blogs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dz73/dz/language/templates/language/details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dz73/dz/language/templates/language/languages.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dz73/dz/language/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/password_generator_project/generator/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/password_generator_project/generator/templates/generator/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/media/default.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/images/left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/images/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/images/pattern.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/images/project-a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/images/project-b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/images/project-c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/styles/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/styles/images.lnk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/styles/modules/_alert.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/styles/modules/_animation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/styles/modules/_author-box.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/styles/modules/_avatar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/styles/modules/_base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/styles/modules/_button.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/styles/modules/_card.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/styles/modules/_form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/styles/modules/_grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/styles/modules/_layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/styles/modules/_loading.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/styles/modules/_tag-input.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/styles/modules/_tag.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/styles/modules/_typography.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/styles/modules/_utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/styles/modules/_variables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/static/uikit/styles/uikit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/templates/projects/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/templates/projects/navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/templates/projects/projects.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fourth/devsearch/projects/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../second/personal_portfolio/blog/templates/blog/blogs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../second/personal_portfolio/blog/templates/blog/details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../second/personal_portfolio/blog/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../second/personal_portfolio/skills/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../second/personal_portfolio/skills/static/skills/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../second/personal_portfolio/skills/static/skills/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../second/personal_portfolio/skills/static/skills/resume.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../second/personal_portfolio/skills/static/skills/wc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../second/personal_portfolio/skills/templates/skills/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../second/personal_portfolio/skills/templates/skills/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../third/todos/todo/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../third/todos/todo/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../third/todos/todo/templates/todo/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../third/todos/todo/templates/todo/completedtodos.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../third/todos/todo/templates/todo/createtodo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../third/todos/todo/templates/todo/currenttodos.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../third/todos/todo/templates/todo/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../third/todos/todo/templates/todo/loginuser.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../third/todos/todo/templates/todo/signupuser.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../third/todos/todo/templates/todo/viewtodo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/python.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password_generator_project/generator/templates/generator/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/password_generator_project/generator/templates/generator/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password_generator_project/generator/templates/generator/password.html" beforeDir="false" afterPath="$PROJECT_DIR$/password_generator_project/generator/templates/generator/password.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="35FSNcwXFEs2ImHnZroHVc9z8aY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "E:/python/first"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0d64eb4a-6cf2-46c0-90eb-a2114ee03590" name="Changes" comment="" />
+      <created>1762704288017</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762704288017</updated>
+    </task>
+    <servers />
+  </component>
+</project>

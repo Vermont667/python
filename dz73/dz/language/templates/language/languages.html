@@ -1,0 +1,24 @@
+{% extends 'blogs/base.html' %}
+
+{% block content %}
+
+<h1>Прайс</h1>
+
+
+
+<div class="block">
+    {% for lang in languages %}
+    <div class="element">
+        <div class="text">
+            <h2 class="block">{{ lang.title }}</h2>
+            <h1>{{ lang.price }}</h1>
+            <p>{{ lang.description|striptags|truncatechars:240 }}</p>
+            <a href="{% url 'detail' lang.id %}"><button>Подробнее</button></a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+{% endblock %}
